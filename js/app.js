@@ -23,7 +23,7 @@ const megaroster = {
        };
         this.students.push(student);
         const listItem = this.buildListItem(student);
-        this.studentList.appendChild(listItem);
+        this.studentList.insertBefore(listItem, this.studentList.firstChild);
         f.reset();
     },
     
