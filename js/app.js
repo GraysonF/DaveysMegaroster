@@ -21,11 +21,14 @@ const megaroster = {
            name: f.studentName.value,
            id: this.max++,
        };
-        this.buildListItem(student);
+        const listItem = this.buildListItem(student);
+        this.studentList.appendChild(listItem);
     },
     
     buildListItem(student) {
-        console.log(student);
+        const li = document.createElement('li');
+        li.textContent = student.name;
+        return li;
     }
 
 }
